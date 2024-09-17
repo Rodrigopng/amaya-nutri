@@ -1,38 +1,82 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: -apple-system,
+  BlinkMacSystemFont, 'Segoe UI',
+  'Fira Sans', Helvetica, Arial,
+  sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landing-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+}
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.navbar-container.visible {
+  height: 100vh;
+  transform: translateY(0);
+  opacity: 1;
+}
+.navbar-container.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px;
+}
+.card-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+
+.tarifs-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  z-index: 1000;
+}
+
+.tarifs-content {
+  background: bisque;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  max-width: 30%;
+  width: 100%;
+  position: relative;
+}
+
+.close-button {
+  background: #f44336;
   color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close-button:hover {
+  background-color: #d32f2f;
 }

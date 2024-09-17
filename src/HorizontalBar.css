@@ -1,0 +1,28 @@
+.horizontal-bar {
+    width: 100%;
+    background-color: crimson;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.horizontal-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.horizontal-bar-left,
+.horizontal-bar-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.horizontal-bar-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.horizontal-bar-button {
+
+}

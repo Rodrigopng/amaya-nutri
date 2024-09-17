@@ -1,0 +1,17 @@
+.rounded-rectangle.card {
+    padding: 1rem;
+    border-radius: 0.50rem;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0, 0.075);
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: cornflowerblue;
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.rounded-rectangle.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+    transform: scale(0.975);
+}
