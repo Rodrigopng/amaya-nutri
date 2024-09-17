@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Rodrigopng/amaya-nutri.git/static/css/main.4441973f.css",
+    "main.js": "/Rodrigopng/amaya-nutri.git/static/js/main.5160f09b.js",
+    "static/js/453.8a365fbb.chunk.js": "/Rodrigopng/amaya-nutri.git/static/js/453.8a365fbb.chunk.js",
+    "index.html": "/Rodrigopng/amaya-nutri.git/index.html",
+    "main.4441973f.css.map": "/Rodrigopng/amaya-nutri.git/static/css/main.4441973f.css.map",
+    "main.5160f09b.js.map": "/Rodrigopng/amaya-nutri.git/static/js/main.5160f09b.js.map",
+    "453.8a365fbb.chunk.js.map": "/Rodrigopng/amaya-nutri.git/static/js/453.8a365fbb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4441973f.css",
+    "static/js/main.5160f09b.js"
+  ]
+}
