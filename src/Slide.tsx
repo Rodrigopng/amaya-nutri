@@ -2,11 +2,16 @@ import React from "react";
 import {Carousel} from "react-bootstrap";
 import './Slide.css'
 
-const Slide = () => {
+interface SlideProps {
+    onSlideChange: (index: number) => void;
+}
+
+const Slide: React.FC<SlideProps> = ({ onSlideChange }) => {
+    console.log("Slide component rendered");
     return (
-        <Carousel interval={3000} className="slide-container" >
+    <Carousel interval={3000} className="slide-container" >
             <Carousel.Item>
-                <div className="carousel-img1" style={{backgroundImage: "url('/img1.jpg')", backgroundSize: 'cover',
+                <div className="carousel-img1" style={{backgroundImage: "url('/amaya-nutri/img1.jpg')", backgroundSize: 'cover',
                     backgroundPosition: 'center', height:"100%"}}>
                     {/*Photo*/}
                 </div>
@@ -17,7 +22,7 @@ const Slide = () => {
             </Carousel.Item>
 
             <Carousel.Item>
-                <div className="carousel-img2" style={{backgroundImage: "url('/img2.jpg')", backgroundSize: 'cover',
+                <div className="carousel-img2" style={{backgroundImage: "url('/amaya-nutri/img2.jpg')", backgroundSize: 'cover',
                     backgroundPosition: 'center', height:"100%"}}>
                     {/*Photo*/}
                 </div>
@@ -28,7 +33,7 @@ const Slide = () => {
             </Carousel.Item>
 
             <Carousel.Item>
-                <div className="carousel-img3" style={{backgroundImage: "url('/img3.jpeg')", backgroundSize: 'cover',
+                <div className="carousel-img3" style={{backgroundImage: "url('/amaya-nutri/img3.jpeg')", backgroundSize: 'cover',
                     backgroundPosition: 'center', height:"100%"}}>
                     {/*Photo*/}
                 </div>

@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import AboutPage from "./AboutPage";
@@ -8,6 +8,7 @@ import HomePage from "./HomePage";
 function App() {
     const [showNavBar, setShowNavBar] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [headerBgColor, setHeaderBgColor] = useState('dark');  // State to track header background color
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,28 +27,24 @@ function App() {
         };
     }, [lastScrollY]);
 
+
     return (
         <div className="App" style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-            <Router>
+            <Router basename={"/amaya-nutri"}>
                 {/* Navbar (MENU) */}
                 <div className={showNavBar ? 'navbar-container visible' : 'navbar-container hidden'}>
-                    <Header />
+                    <Header bgColor={headerBgColor} />  {/* Pass the header background color */}
                 </div>
                 <div>
                     {/* Routes */}
                     <Routes>
-                        <Route path="/" element={<HomePage />} />  {/* HomePage component as default */}
+                        <Route path="/" element={<HomePage onSlideChange={setHeaderBgColor} />} />  {/* Pass the callback to HomePage */}
                         <Route path="/about" element={<AboutPage />} />
-                        {/*
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/pricing" element={<PricingPage />} />
-                        <Route path="/blog" element={<BlogPage />} />
-                        */}
                     </Routes>
                 </div>
             </Router>
         </div>
     );
 }
-export default App;
 
+export default App;

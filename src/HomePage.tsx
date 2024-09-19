@@ -7,7 +7,13 @@ import IconCanvas from "./IconCanvas";
 import BottomContact from "./BottomContact";
 import "./App.css"
 
-const HomePage: React.FC = () =>  {
+
+interface HomePageProps {
+    onSlideChange: (color: string) => void;
+}
+
+const HomePage: React.FC<HomePageProps> = ({onSlideChange}) =>  {
+
     // Tariffs pop-up logic
     const [isTarifsVisible, setIsTarifsVisible] = useState(false);
 
@@ -19,11 +25,17 @@ const HomePage: React.FC = () =>  {
         setIsTarifsVisible(false);
     };
 
+    // Callback to change header background color
+    const handleSlideChange = (index: number) => {
+        const colors = ['#ef9ba0', '#7cc583', '#c9a87c'];  // Example colors for each slide
+        onSlideChange(colors[index] || '#000000'); // Change color based on the slide
+    };
+
     return (
     <>
     {/* SlideShow */}
 
-    <Slide />
+    <Slide onSlideChange={handleSlideChange}/>
 
     {/* Tariff Bar */}
     <HorizontalBar title="CONOCE NUESTRAS TARIFAS" buttonText="TARIFAS" onButtonClick={showTarifs} />
