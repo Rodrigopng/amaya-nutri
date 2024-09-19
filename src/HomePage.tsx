@@ -28,7 +28,9 @@ const HomePage: React.FC<HomePageProps> = ({onSlideChange}) =>  {
     // Callback to change header background color
     const handleSlideChange = (index: number) => {
         const colors = ['#ef9ba0', '#7cc583', '#c9a87c'];  // Example colors for each slide
-        onSlideChange(colors[index] || '#000000'); // Change color based on the slide
+        const newColor = colors[index] || 'dark'; // Change color based on the slide
+        console.log(`Changing header color to: ${newColor}`); // Log the new color
+        onSlideChange(newColor);
     };
 
     return (

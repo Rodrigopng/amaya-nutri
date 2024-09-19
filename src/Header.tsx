@@ -5,16 +5,12 @@ import './Header.css';
 import {Link} from "react-router-dom";
 
 interface HeaderProps {
-    bgColor: string;
+    backgroundColor: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ bgColor }) => {
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
+const Header: React.FC<HeaderProps> = ({ backgroundColor }) => {
     return (
-        <Navbar bg="bgColor" variant="dark">
+        <Navbar style={{ backgroundColor, transition: 'background-color 0.5s' }} variant="dark">
             <Navbar.Brand href="#home">
                 <img src={"logo192.png"} width={"25"} height={"25"}  alt={"Logo"}/>
             </Navbar.Brand>

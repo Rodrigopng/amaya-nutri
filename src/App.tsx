@@ -33,7 +33,7 @@ function App() {
             <Router basename={"/amaya-nutri"}>
                 {/* Navbar (MENU) */}
                 <div className={showNavBar ? 'navbar-container visible' : 'navbar-container hidden'}>
-                    <Header bgColor={headerBgColor} />  {/* Pass the header background color */}
+                    <Header backgroundColor={headerBgColor} />  {/* Pass the header background color */}
                 </div>
                 <div>
                     {/* Routes */}

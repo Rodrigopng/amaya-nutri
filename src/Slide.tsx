@@ -7,9 +7,8 @@ interface SlideProps {
 }
 
 const Slide: React.FC<SlideProps> = ({ onSlideChange }) => {
-    console.log("Slide component rendered");
     return (
-    <Carousel interval={3000} className="slide-container" >
+    <Carousel interval={3000} className="slide-container" onSelect={onSlideChange} >
             <Carousel.Item>
                 <div className="carousel-img1" style={{backgroundImage: "url('/amaya-nutri/img1.jpg')", backgroundSize: 'cover',
                     backgroundPosition: 'center', height:"100%"}}>
