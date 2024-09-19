@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/amaya-nutri/static/css/main.f356a71d.css",
-    "main.js": "/amaya-nutri/static/js/main.9fbae0cd.js",
+    "main.js": "/amaya-nutri/static/js/main.72afa939.js",
     "static/js/453.8a365fbb.chunk.js": "/amaya-nutri/static/js/453.8a365fbb.chunk.js",
     "index.html": "/amaya-nutri/index.html",
     "main.f356a71d.css.map": "/amaya-nutri/static/css/main.f356a71d.css.map",
-    "main.9fbae0cd.js.map": "/amaya-nutri/static/js/main.9fbae0cd.js.map",
+    "main.72afa939.js.map": "/amaya-nutri/static/js/main.72afa939.js.map",
     "453.8a365fbb.chunk.js.map": "/amaya-nutri/static/js/453.8a365fbb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f356a71d.css",
-    "static/js/main.9fbae0cd.js"
+    "static/js/main.72afa939.js"
   ]
 }
