@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import AboutPage from "./AboutPage";
 import HomePage from "./HomePage";
+import TarifPage from "./TarifPage";
 
 function App() {
     const [showNavBar, setShowNavBar] = useState(true);
@@ -40,6 +41,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<HomePage onSlideChange={setHeaderBgColor} />} />  {/* Pass the callback to HomePage */}
                         <Route path="/about" element={<AboutPage />} />
+                        <Route path="/pricing" element={<TarifPage />} />
                     </Routes>
                 </div>
             </Router>
